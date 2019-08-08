@@ -2,7 +2,7 @@
 	if(isset($_SESSION['autenticacao'])){
 		if($_SESSION["permissao"] == "1"){
 ?>
-		<nav class = "navbar navbar-expand-md navbar-light" style="background-color: #4682B4;">
+		<nav class = "navbar navbar-expand-md navbar-light" >
 		
 			<a class = "navbar-brand nav-link" id = "link" href = "#" >MENU</a>
 			
@@ -40,6 +40,10 @@
 					
 					<li class = "nav-item">
 						<a class = "nav-link" href = "#" id = "link7">Sobre</a>
+					</li>
+					
+					<li class = "nav-item">
+						<a class = "nav-link" href = "#" id = "link12">Como navegar no sistema</a>
 					</li>
 					
 					&nbsp;
@@ -55,7 +59,7 @@
 <?php
 		}else if($_SESSION["permissao"] == "0"){
 ?>
-			<nav class = "navbar navbar-expand-md navbar-light" style="background-color: #4682B4; font-size: 17px;">
+			<nav class = "navbar navbar-expand-md navbar-light"  >
 		
 			<a class = "navbar-brand nav-link" id = "link" href = "#" >MENU</a>
 			
@@ -93,6 +97,10 @@
 					
 					<li class = "nav-item">
 						<a class = "nav-link" href = "#" id = "link7">Sobre</a>
+					</li>
+					
+					<li class = "nav-item">
+						<a class = "nav-link" href = "#" id = "link12">Como navegar no sistema</a>
 					</li>
 					
 					<li class = "nav-item">
@@ -117,7 +125,7 @@
 		}
 	}else{
 ?>
-		<nav class = "navbar navbar-expand-md navbar-light" style="background-color: #4682B4; font-size: 19px;">
+		<nav class = "navbar navbar-expand-md navbar-light" >
 		
 			<a class = "navbar-brand nav-link" id = "link" href = "#" >MENU</a>
 			
@@ -159,6 +167,10 @@
 						
 					<li class = "nav-item">
 						<a class = "nav-link" href = "#" id = "link8">Login</a>
+					</li>
+					
+					<li class = "nav-item">
+						<a class = "nav-link" href = "#" id = "link12">Como navegar no sistema</a>
 					</li>
 						
 				</ul>

@@ -22,7 +22,7 @@ include("conexao.php");
 		$(document).ready(function(){
 
 			$("#link").click(function(){
-				location.href = "home.php";
+				location.href = "index.php";
 			});
 			
 			$("#link1").click(function(){
@@ -80,24 +80,31 @@ include("conexao.php");
 
 		});
 		
+		$(document).on('click', '.voltar_teste', function() {
+			
+			location.href = "teste.php";
+
+		});
+		
 	///////////////////////////////
-	
+		
 		$(document).on('click', '.btnteste', function() {
 			
-			p1 = $(".p1:checked").val();
-			p2 = $(".p2:checked").val();
-			p3 = $(".p3:checked").val();
-			p4 = $(".p4:checked").val();
-			p5 = $(".p5:checked").val();
-			p6 = $(".p6:checked").val();
-			p7 = $(".p7:checked").val();
-			p8 = $(".p8:checked").val();
-			p9 = $(".p9:checked").val();
-			p10 = $(".p10:checked").val();
+			p1 = $("#p1:checked").val();
+			p2 = $("#p2:checked").val();
+			p3 = $("#p3:checked").val();
+			p4 = $("#p4:checked").val();
+			p5 = $("#p5:checked").val();
+			p6 = $("#p6:checked").val();
+			p7 = $("#p7:checked").val();
+			p8 = $("#p8:checked").val();
+			p9 = $("#p9:checked").val();
+			
+			$("#resultado").fadeIn();
 			
 			$.ajax({ 
 			
-				url : "registra_teste.php", 
+				url : "regis_teste.php", 
 				type : 'post', 
 				data : { 
 				
@@ -109,8 +116,7 @@ include("conexao.php");
 					p6 : p6,
 					p7 : p7,
 					p8 : p8,
-					p9 : p9,
-					p10 : p10
+					p9 : p9
 				
 				},
 				
@@ -123,7 +129,8 @@ include("conexao.php");
 			
 			.done(function(msg){
 				
-				alert("O resultado do seu teste eh " + msg + " de 100");
+				$("#teste").hide();
+				$("#resultado").html(msg);
 			
 			})
 			
@@ -173,9 +180,10 @@ include("conexao.php");
 			})
 			
 			.done(function(msg){
-				
-					location.href = "login.php";
-
+				$("#result_login").fadeIn();
+				$("#result_login").html("cadastro realizado com sucesso!");
+				$("#cadastro").hide();
+				$("#esconde_login").fadeIn();
 			})
 			
 			.fail(function(jqXHR, textStatus, msg){
@@ -195,7 +203,7 @@ include("conexao.php");
 			
 		});
 		
-///////////////////////////////////////LOGIN//////////////////////////////////////////////////////
+/////////////////////////////////////// LOGIN //////////////////////////////////////////////////////
 		
 		$(document).on('click', '.btn_login', function() {
 				
@@ -219,7 +227,7 @@ include("conexao.php");
 			
 			.done(function(msg){
 				if(msg == 1){
-					location.href = "home.php";
+					location.href = "index.php";
 					
 				}else{
 					alert("Login ou senha invalidos")
@@ -274,9 +282,10 @@ include("conexao.php");
 			
 			.done(function(msg){
 				
-					alert("Cadastro alterado com sucesso!");
-					location.href = "ver_meu_cadastro.php";
-					
+				$("#result_alterar").fadeIn();
+				$("#result_alterar").html("Cadastro alterado com sucesso!");
+				$("#alterando").hide();
+				$("#ver_meu_cadastro").fadeIn();
 			
 			})
 			
@@ -295,52 +304,7 @@ include("conexao.php");
 			location.href = "excluir.php";
 			
 		});
-		
-///////////////////////////////////////ALTERAR SENHA//////////////////////////////////////////////////////
-/*
-		$(document).on('click', '.alt_senha', function() {
-					
-			location.href = "alterando_senha.php";
-			
-		});
-		
-	//////////////////////////////////
-	
-	$(document).on('click', '.alter_senha', function() {
-			
-			var senha = $("#alte_senha").val();
-			
-			$.ajax({ 
-			
-				url : "altera_senha.php",
-				type : 'post', 
-				data : { 
-				
-					senha: senha
-				
-				},
-				
-				beforeSend : function(){ 
-				
-				}					
-			})
-			
-			.done(function(msg){
-				
-					alert("Senha alterada com sucesso!");
-					location.href = "ver_meu_cadastro.php";
 
-			})
-			
-			.fail(function(jqXHR, textStatus, msg){
-			
-				alert(msg);
-			
-			});
-			
-		});
-		*/
-		
 		</script>
 		
 	</head>

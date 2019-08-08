@@ -8,6 +8,9 @@ include("cabecalho.php");
 	$linha = mysqli_fetch_array($resultado);
 ?>
 
+<div id = "result_alterar">
+</div>
+
 <div id = "alterando">
 	<center>
 	<hr />
@@ -37,12 +40,9 @@ include("cabecalho.php");
 			<br />
 			
 			<button class = "alt_cadastro" style = "display: inline-block;"> Alterar </button>
-			<!--
-			<button class = "alt_senha" style = "display: inline-block;"> Alterar Senha </button>
-			-->
 	
 	<hr />
-</center>
+	</center>
 </div>
 
 <?php

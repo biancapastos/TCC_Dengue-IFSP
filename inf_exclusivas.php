@@ -1,6 +1,6 @@
 <?php
+	include("cabecalho.php");
 	if(isset($_SESSION["autenticacao"])){
-		include("cabecalho.php");
 ?>
 
 <div id = "inf_exclusivas">
@@ -19,8 +19,13 @@
 
 <?php
 	include("rodape.php");
-	
 	}else{
-		header("location: home.php");
+?>
+		<div style = "text-align: center; margin: 50px auto; display: block; width: 63%; padding: 8px; background-color: #FFF; border: 1px solid #4682B4; box-shadow: 0px 0px 5px 2px #4682B4;">
+			<hr />
+			<p style = "font-size: 18px"> <b>Voce nao tem permissao para acessar esta pagina.</b> Cadastre-se no site ou faca o login.</p>
+			<hr />
+		</div>
+<?php
 	}
 ?>
