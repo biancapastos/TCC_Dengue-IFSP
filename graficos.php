@@ -1,22 +1,4 @@
-<?php include("cabecalho_template.php"); ?>
-
-</head>
-
-<body>
-
- <div id = "main">
-    
-	<article style = "font-family: verdana; font-size: 18px;">	
-	  <center>
-
-		<h2> Graficos </h2>
-		<div style = "padding: 5px 80px;">
-			<span style = "font-size: 18px; color: grey; padding: 10px;"> 
-			  Veja nos diferentes gráficos informacoes sobre a dengue e as relacoes com os casos marcados.
-			</span>
-			<hr />
-		</div>
-<?php
+<?php include("cabecalho_template.php"); 
 
 
 
@@ -50,9 +32,9 @@
 	$resultado_p9 = mysqli_query($link, $p9);
 	$resultado_p10 = mysqli_query($link, $p10);
 		
-	//$linha_gn = mysqli_fetch_array($resultado_grave_nao);
-	//$linha_gs = mysqli_fetch_array($resultado_grave_sim);
-	//$linha_ga = mysqli_fetch_array($resultado_grave_atencao);
+	$linha_gn = mysqli_fetch_array($resultado_grave_nao);
+	$linha_gs = mysqli_fetch_array($resultado_grave_sim);
+	$linha_ga = mysqli_fetch_array($resultado_grave_atencao);
 	
 	$linha_p1 = mysqli_fetch_array($resultado_p1);
 	$linha_p2 = mysqli_fetch_array($resultado_p2);
@@ -65,46 +47,109 @@
 	$linha_p9 = mysqli_fetch_array($resultado_p9);
 	$linha_p10 = mysqli_fetch_array($resultado_p10);
 	
+	
+	$p1_grafico = $linha_p1[0];
 
+?>
 
-?>		
-		<div id = "graficos">
-		
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		
-<script type="text/javascript">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+	  var P1 = <?php echo $linha_p1[0];?>;
+	  var P2 = <?php echo $linha_p2[0];?>;
+	  var P3 = <?php echo $linha_p3[0];?>;
+	  var P4 = <?php echo $linha_p4[0];?>;
+	  var P5 = <?php echo $linha_p5[0];?>;
+	  var P6 = <?php echo $linha_p6[0];?>;
+	  var P7 = <?php echo $linha_p7[0];?>;
+	  var P8 = <?php echo $linha_p8[0];?>;
+	  var P9 = <?php echo $linha_p9[0];?>;
+	  var P10 = <?php echo $linha_p10[0];?>;
+
+	
+	  
+
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-          ['sintomas', 'ocorrencia'],
-          ['p1','<?php echo $linha_p1[0];?>'],
-          ['p2','<?php echo $linha_p2[0];?>'],
-          ['p3','<?php echo $linha_p3[0];?>'],
-          ['p4','<?php echo $linha_p4[0];?>'],
-          ['p5','<?php echo $linha_p5[0];?>'],
-          ['p6','<?php echo $linha_p6[0];?>'],
-          ['p7','<?php echo $linha_p7[0];?>'],
-          ['p8','<?php echo $linha_p8[0];?>'],
-          ['p9','<?php echo $linha_p9[0];?>'],
-          ['p10','<?php echo $linha_p10[0];?>']
+         ['sintomas', 'ocorrencia'],
+			['falta de apetite',P1],
+			['dor ou incomodo ao movimentar os olhos',P2],
+			['mancha vermelha ou roxas no corpo',P3],
+			['dor de cabeca frequente',P4],
+			['dores musculares',P5],
+			['dor abdominal INTENSA e CONTINUA',P6],
+			['vomitos persistentes',P7],
+			['sangramento',P8],
+			['febre alta (maior que 38.5ยบC)',P9],
+			['mudanca de comportamento, como irritabilidade ',P10]
         ]);
 
         var options = {
-          title: 'Resultado geral das intensidades dos sintomas'
+          title: ''
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
         chart.draw(data, options);
+      } 
+ </script>
+ 
+ <script type="text/javascript"> 
+ 
+	google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart2);
+	  
+	  var grave_nao = <?php echo $linha_gn[0];?>;
+	  var grave_sim = <?php echo $linha_gs[0];?>;
+	  var grave_atencao = <?php echo $linha_ga[0];?>;
+	  
+	  function drawChart2() {
+
+        var data2 = google.visualization.arrayToDataTable([
+         ['sintomas', 'ocorrencia'],
+			['Grave',grave_sim],
+			['Nao grave',grave_nao],
+			['atencao',grave_atencao]
+        ]);
+
+        var options2 = {
+          title2: 'Resultado geral  dos sintomas'
+        };
+
+        var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+
+        chart2.draw(data2, options2);
       }
-</script>
-		
-		<div id="piechart" > </div>
-	
+    </script>
+
+</head>
+
+<body>
+
+ <div id = "main">
+    
+	<article style = "font-family: verdana; font-size: 18px;">	
+	  <center>
+
+		<h2> Graficos </h2>
+		<div style = "padding: 5px 80px;">
+			<span style = "font-size: 18px; color: grey; padding: 10px;"> 
+			  Veja nos diferentes gráficos informacoes sobre a dengue e as relacoes com os casos marcados.
+			</span>
+			<hr />
 		</div>
+		
+		<!--<div id = "graficos"-->
+		
+		<p>Resultado geral dos sintomas</p>		
+	<div id="piechart" style="width: 80%; height: 100%;border: 1px solid #4682B4;"></div>
+	<p>Resultado geral dos testes</p>
+	<div id="piechart2" style="width: 80%; height: 100%;border: 1px solid #4682B4;"></div>	
+		<!--</div>-->
 	  </center>
 	</article>
 	

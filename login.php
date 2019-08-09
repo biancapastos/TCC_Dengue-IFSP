@@ -22,7 +22,7 @@
 		  }
 		  #i_map, #i_ran, #i_gra, #i_tes, #i_log{
 		    border-radius: 50%;
-			border: 5px double #646df0;
+			border: 5px double #0b6b9e;
 		  }
 		  #main {
 		    display: flex;
@@ -33,11 +33,11 @@
 		  }
 		  #main > nav {
 		    flex: 0 0 3vw;
-		    background: #ADD8E6;
+		    background: #0b6b9e;
 		  }
 		  #main > aside {
 			flex: 0 0 10vw;
-		    background: #ADD8E6;
+		    background: #0b6b9e;
 		  }
 		  #main > nav {
 		    order: -1;
@@ -46,7 +46,7 @@
 		    padding: 1em;
 		  }
 		  header, footer {
-		    background: #ADD8E6	;
+		    background: #0b6b9e	;
 		  }
 		  header {
 			height: 0vh;

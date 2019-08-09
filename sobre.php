@@ -17,11 +17,11 @@
 	
 	<article>
 		<br />
-		<div id = "sobre" style = "padding: 0px 50px;">
+		<div id = "sobre" style = "padding: 0px 50px;border: 5px double #4682B4;">
 			<center>
 			<h3>Sobre</h3>
 			<hr />
-				<p style = "font-size: 17px; text-align: justify;">
+				<p style = "font-size: 18px; text-align: justify;">
 				Esse sistema foi elaborado como proposta de TCC (Trabalho de Conclusao de Curso).<br />
 				O site foi pensado e desenvolvido por Akyza Revly Santos de Jesus e Bianca Santos Pastos, 
 				alunas do Instituto Federal de Educacao, Ciencia e Tecnologia de Sao Paulo (IFSP) no campus da cidade de Araraquara,

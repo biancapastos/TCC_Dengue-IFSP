@@ -1,60 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-
-	<meta charset="utf-8"/>
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-	<title>Login</title>
-	
-	<!-- coisas do modal -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	
-	<style type="text/css" media="screen">
-	 	* {
-		   box-sizing: border-box; 
-		  }
-		  body {
-		    margin: 0;
-		  }
-		  #i_map, #i_ran, #i_gra, #i_tes, #i_log{
-		    border-radius: 50%;
-			border: 5px double #646df0;
-		  }
-		  #main {
-		    display: flex;
-		    min-height:100vh;
-		  }
-		  #main > article {
-		    flex: 1;
-		  }
-		  #main > nav {
-		    flex: 0 0 3vw;
-		    background: #ADD8E6;
-		  }
-		  #main > aside {
-			flex: 0 0 10vw;
-		    background: #ADD8E6;
-		  }
-		  #main > nav {
-		    order: -1;
-		  }
-		  header, footer, article, nav, aside {
-		    padding: 1em;
-		  }
-		  header, footer {
-		    background: #ADD8E6	;
-		  }
-		  header {
-			height: 0vh;
-		  }
-		  footer{
-			height: 0vh;
-		  }
-	</style>
+<?php include("cabecalho_template.php"); ?>
 	
 	<style>
 		input{
@@ -89,8 +33,9 @@
 	
 	
 	 <center>
-	  <hr />
+	 
 	  <h1> Como navegar pelo sistema !!! </h1>
+	   <hr />
 	 </center>
 	
 

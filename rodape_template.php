@@ -1,7 +1,7 @@
      <nav>	
 	  <center>
 	
-		<p> <a href ="menu_teste3.php"> <img width="80px" height="80px" src="home.png" id = "i_men" title= "Home"/> </a> </p>
+		<p> <a href ="menu_teste3.php"> <img width="70px" height="70px" src="home.png" id = "i_men" title= "Home"/> </a> </p>
 		<p> <a href ="mapa.php"> <img width="80px" height="80px" src="mapa.jpg" id = "i_map" title= "Mapa"/> </a> </p>
 		<p> <a href ="ranking.php"> <img width="80px" height="80px" src="ranking1.jpg" id = "i_ran" title= "Ranking"/> </a> </p>
 		<p> <a href ="graficos.php"> <img width="80px" height="80px" src="charts.jpg" id = "i_gra" title= "Graficos"/> </a> </p>

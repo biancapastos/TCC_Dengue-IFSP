@@ -215,13 +215,13 @@
 			<br />
 			
 			<center>
-			<div class = "resultado" style = "border: 4px double #646df0; width: 86%; padding: 35px;">
+			<div class = "resultado" style = "border: 4px double #4682B4; width: 86%; padding: 35px;">
 				<?php
 					include("result_teste.php");
 				?>
 			</div>
 			
-			<div id = "pergunta1" style = "border: 3px double #646df0; width: 55%; padding: 15px;" >
+			<div id = "pergunta1" style = "border: 3px double #4682B4; width: 55%; padding: 15px;" >
 				<h4>Pergunta 1</h4> 
 				<p>Voce sente falta de apetite ?</p>
 				<select name = "p1" id = "p1" onchange = "p1(this)"  >
@@ -232,7 +232,7 @@
 				<button class = "btn_p1">Proxima</button>
 			</div>
 			
-			<div id = "pergunta2" style = "border: 3px double #646df0; width: 55%; padding: 15px;" >
+			<div id = "pergunta2" style = "border: 3px double #4682B4; width: 55%; padding: 15px;" >
 				<h4>Pergunta 2</h4> 
 				<p>Voce sente dor ou incomodo ao movimentar os olhos ?
 				<a href= " https://www.dicionarioinformal.com.br/dor+retro-orbit%E1ria/" target="resource window">(dor retro-orbit?ria )</a></p>
@@ -244,7 +244,7 @@
 				<button class = "btn_p2">Proxima</button>
 			</div>
 			
-			<div id = "pergunta3" style = "border: 3px double #646df0; width: 55%; padding: 15px;" >
+			<div id = "pergunta3" style = "border: 3px double #4682B4; width: 55%; padding: 15px;" >
 				<h4>Pergunta 3</h4> 
 				<p>Voce percebeu alguma mancha vermelha ou roxas em seu corpo ?
 				<a href= " https://drauziovarella.uol.com.br/doencas-e-sintomas/purpura-trombocitopenica-idiopatica/" target="resource window">(p?rpura)</a>
@@ -257,7 +257,7 @@
 				<button class = "btn_p3">Proxima</button>
 			</div>
 			
-			<div id = "pergunta4" style = "border: 3px double #646df0; width: 55%; padding: 15px;" >
+			<div id = "pergunta4" style = "border: 3px double #4682B4; width: 55%; padding: 15px;" >
 				<h4>Pergunta 4</h4> 
 				<p>Voce sente dor de cabeca frequente ou tem a sensacao de estar com a cabeca pesada ? 
 				<a href= "https://drauziovarella.uol.com.br/doencas-e-sintomas/dor-de-cabeca-cefaleia/" target="resource window">(Cefaleia)</a></p>
@@ -269,7 +269,7 @@
 				<button class = "btn_p4">Proxima</button>
 			</div>
 			
-			<div id = "pergunta5" style = "border: 3px double #646df0; width: 55%; padding: 15px;" >
+			<div id = "pergunta5" style = "border: 3px double #4682B4; width: 55%; padding: 15px;" >
 				<h4>Pergunta 5</h4> 
 				<p>Voce sente dores musculares<a href= "https://blog.drconsulta.com/causas-da-mialgia/" target="resource window">(Mialgia)</a>
 					ou nas "juntas"<a href= "http://www.move.med.br/2018/04/12/o-que-e-artralgia/" target="resource window">(Artralgia)</a> 
@@ -283,7 +283,7 @@
 				<button class = "btn_p5">Proxima</button>
 			</div>
 			
-			<div id = "pergunta6" style = "border: 3px double #646df0; width: 55%; padding: 15px;" >
+			<div id = "pergunta6" style = "border: 3px double #4682B4; width: 55%; padding: 15px;" >
 				<h4>Pergunta 6</h4> 
 				<p>Voce sente dor abdominal INTENSA e CONTINUA ?</p>
 				<select name = "p6" id = "p6" onchange = "p6(this)"  >
@@ -294,7 +294,7 @@
 				<button class = "btn_p6">Proxima</button>
 			</div>
 			
-			<div id = "pergunta7" style = "border: 3px double #646df0; width: 55%; padding: 15px;" >
+			<div id = "pergunta7" style = "border: 3px double #4682B4; width: 55%; padding: 15px;" >
 				<h4>Pergunta 7</h4> 
 				<p>Voce tem vomitos persistentes ?</p>
 				<select name = "p7" id = "p7" onchange = "p7(this)"  >
@@ -305,7 +305,7 @@
 				<button class = "btn_p7">Proxima</button>
 			</div>
 			
-			<div id = "pergunta8" style = "border: 3px double #646df0; width: 55%; padding: 15px;" >
+			<div id = "pergunta8" style = "border: 3px double #4682B4; width: 55%; padding: 15px;" >
 				<h4>Pergunta 8</h4> 
 				<p>Voce teve algum tipo de sangramento ?
 				<a href= "https://site.medicina.ufmg.br/observaped/exantema-doenca-exantematica/" target="resource window">(Exantema)</a>
@@ -318,7 +318,7 @@
 				<button class = "btn_p8">Proxima</button>
 			</div>
 			
-			<div id = "pergunta9" style = "border: 3px double #646df0; width: 55%; padding: 15px;" >
+			<div id = "pergunta9" style = "border: 3px double #4682B4; width: 55%; padding: 15px;" >
 				<h4>Pergunta 9</h4> 
 				<p>Voce teve febre alta (maior que 38.5ºC) ? </p>
 				<select name = "p9" id = "p9" onchange = "p9(this)"  >
@@ -329,7 +329,7 @@
 				<button class = "btn_p9">Proxima</button>
 			</div>
 			
-			<div id = "pergunta10" style = "border: 3px double #646df0; width: 55%; padding: 15px;" >
+			<div id = "pergunta10" style = "border: 3px double #4682B4; width: 55%; padding: 15px;" >
 				<h4>Pergunta 10</h4> 
 				<p>Voce notou alguma mudanca de comportamento, como irritabilidade ? </p>
 				<select name = "p10" id = "p10" onchange = "p10(this)"  >
@@ -340,7 +340,7 @@
 				<button class = "btn_p10">Proxima</button>
 			</div>
 			
-			<div id = "pergunta11" style = "border: 3px double #646df0; width: 55%; padding: 15px;" >
+			<div id = "pergunta11" style = "border: 3px double #4682B4; width: 55%; padding: 15px;" >
 				<p>Obrigado por responder as questoes!</p>
 				<input type = "hidden" id = "mostrar_resultado" value = "sim"/>
 				<input type = "submit" value = "FIM" class = "btn_resultado" />

@@ -30,7 +30,7 @@
 
 <body>
   
-  <div id="main" style = "background-color: #f0f9fd;">
+  <div id="main">
 	
 	<article>
 	
@@ -44,7 +44,7 @@
       <input onclick="deleteMarkers();" type=button value="Deletar Pontos">
     </div>-->
 	
-    <div id="map"></div>
+    <div id="map" style ="border: 3px double #4682B4;"></div>
 	
     <script>
            // In the following example, markers appear when the user clicks on the map.
